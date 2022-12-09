@@ -7,6 +7,11 @@ def best_score(a_dictionary):
             mx = mx
         else:
             mx = dic_vals[j]
+    fount = ''
     for k in a_dictionary:
         if a_dictionary[k] == mx:
-            return (k)
+            found = k
+    if found != '':
+        return (found)
+    else:
+        return (None)
