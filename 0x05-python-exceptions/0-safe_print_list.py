@@ -6,5 +6,5 @@ def safe_print_list(my_list=[], x=0):
             print(my_list[j], end="")
             count += 1
     except IndexError:
-        print("Index error out fo bound")
+        print("")
     return count
