@@ -18,11 +18,23 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    @property
     def size(self):
         """Retrieve the size property
             Return: size (int)
         """
         return self.__size
+
+    @classmethod
+    def size(self, value):
+        """Set the new value to size
+            Args: value (int)
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be integer")
+        elif value < 0:
+            raise ValueError("sie must be >= 0")
+        self.__size = value
 
     def area(self):
         """Calculate the sqaure area
