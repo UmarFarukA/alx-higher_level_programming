@@ -52,7 +52,7 @@ class Square:
             Return:
                 square of size
         """
-        return self.__size * self_size 
+        return self.__size ** 2
 
     def my_print(self):
         """Prints square based on size"""
