@@ -62,8 +62,7 @@ class Rectangle:
         h = self.height
         rec = []
         for j in range(h):
-            for i in range(w):
-                rec.append("#")
-            if j != w - 1:
+            [rec.append("#") for i in range(w)]
+            if j != h - 1:
                 rec.append("\n")
-        return (("".join(rec)))
+        return ("".join(rec))
