@@ -70,7 +70,7 @@ class Rectangle:
         h = self.height
         rec = []
         for j in range(h):
-            [rec.append(type(self).print_symbol) for i in range(w)]
+            [rec.append(self.print_symbol) for i in range(w)]
             if j != h - 1:
                 rec.append("\n")
         return ("".join(rec))
