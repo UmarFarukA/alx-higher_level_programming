@@ -60,7 +60,7 @@ class Rectangle:
             return ("")
         w = self.width
         h = self.height
-        for j in range(w):
-            for i in range(h):
+        for j in range(h):
+            for i in range(w):
                 print("#")
             print("\n")
