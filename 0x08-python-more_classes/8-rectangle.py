@@ -104,4 +104,3 @@ class Rectangle:
         """print a message after deletion rectangle"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
