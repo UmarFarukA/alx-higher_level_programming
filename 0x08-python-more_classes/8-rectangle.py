@@ -88,6 +88,15 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rec_1, rec_2):
+        """Compares two rectangles
+        Args:
+            rec_1(Rectangle): First instance
+            rec_2(Rectangle): Second Instance
+        Raises:
+            TypeError: If either is not an instance of Rectangle
+        Return:
+            Biggest or equla
+        """
         if not isinstance(rec_1, Rectangle):
             raise TypeError("rec_1 must be an instance of Rectangle")
         if not isinstance(rec_2, Rectangle):
