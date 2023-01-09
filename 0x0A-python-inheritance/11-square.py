@@ -22,7 +22,7 @@ class Square(Rectangle):
         string += str(super().__width) + "/" + str(super().__height)
         return string
 
-    def __print__(self):
+    def print(self):
         """print the string representation"""
         print("[{}] {} / {}".format(self.__class__.__name__, super().__width,
                                     super().__height))
