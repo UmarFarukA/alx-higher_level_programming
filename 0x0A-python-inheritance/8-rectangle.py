@@ -2,7 +2,7 @@
 """Defines a rectangle class."""
 
 
-class Rectangle(BaeGeometry):
+class Rectangle(BaseGeometry):
     """Represents a Rectangle class"""
     def __init__(self, width, height):
         """Initializes the rectangle class
