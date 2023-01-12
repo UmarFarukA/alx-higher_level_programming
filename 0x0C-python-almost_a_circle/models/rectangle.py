@@ -34,7 +34,7 @@ class Rectangle(Base):
         if not isinstance(value, int):
             raise TypeError("width must be an Integer")
         if value <= 0:
-            raise ValueError("width must be greater than 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -50,8 +50,8 @@ class Rectangle(Base):
         """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        if height <= 0:
-            raise ValueError("height must be greater than 0")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -62,8 +62,8 @@ class Rectangle(Base):
     @setter.x
     def x(self, value):
         """Set new value for x"""
-        if not isinstance(value, int):
-            raise TypeError("x's value must be an integer")
+        if value <= 0:
+            raise ValueError("x must be > 0")
         self.__x = value
 
     @property
@@ -74,6 +74,24 @@ class Rectangle(Base):
     @setter.y
     def y(self, value):
         """set new value for y"""
-        if not isinstance(value, int):
-            raise TypeError("y's value must be integer")
+        if value <= 0:
+            raise ValueError("y's value must be integer")
         self.__y = y
+
+    def area(self):
+        """Function that calculate Area of Rectangle"""
+        return (self.__width * self.__height)
+
+    def display(self):
+        """Display Rectangle instance with #"""
+        for j in range(self.__height):
+            for k in range(self.__width):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        """Returns string representation of REctangle"""
+        string = "[" + "("+str(self.id)+")"
+        string += str(self.__x) + "/" + str(self.__y) + "-"
+        string += str(self.__width) + "/" + str(sself.__height) + "]"
+        return string
