@@ -12,5 +12,8 @@ class Base:
         Args:
             id (int): Id to use defaultto None
         """
-        Base.__nb_objects += 1
-        id = Base.__nb_objects
+        if id not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            id = Base.__nb_objects
