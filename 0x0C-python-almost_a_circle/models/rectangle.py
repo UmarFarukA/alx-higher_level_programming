@@ -20,7 +20,7 @@ class Rectangle(Base):
         self.__x = x
         self.__y = y
 
-    @propoerty
+    @property
     def width(self):
         """Return the Rectangle width"""
         return (self.__width)
@@ -54,7 +54,7 @@ class Rectangle(Base):
             raise ValueError("height must be greater than 0")
         self.__height = value
 
-    @propert
+    @property
     def x(self):
         """Get the value of x"""
         return (self.__x)
