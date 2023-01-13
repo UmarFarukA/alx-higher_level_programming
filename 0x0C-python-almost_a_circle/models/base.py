@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a class Base"""
+import json
 
 
 class Base:
@@ -17,3 +18,32 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """Returns JSON string representation of
+        list_dictionaries
+        """
+        if list_dictionaries is None:
+            return "[]"
+        return (json.dumps(list_dictionaries))
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """Function that writes JSON string list_objs
+        to file"""
+        file_name = cls.__name__ + ".json"
+        with open(file_name, "w", encoding="utf-8") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                lst = [obj.to_dictionary() for obj in list_objs]
+                f.write(Base.to_json_string(lst))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns list of JSON strong representations"""
+        if json_string is None:
+            return ("[]")
+        else:
+            return (json.loads(json_string))
