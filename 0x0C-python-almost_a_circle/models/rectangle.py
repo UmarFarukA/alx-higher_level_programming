@@ -42,7 +42,7 @@ class Rectangle(Base):
         """Get the value of height"""
         return (self.__height)
 
-    @width.setter
+    @height.setter
     def height(self, value):
         """Set new value for Rectangle height
         Args:
