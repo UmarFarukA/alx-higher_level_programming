@@ -111,7 +111,7 @@ class Rectangle(Base):
             for i in range(len(args)):
                 if args[i] == 0:
                     self.id = args[i]
-                elif args[i] == None:
+                elif args[i] is None:
                     self.__init__(self.width, self.height, self.x, self.y)
                     self.width = args[i]
                     self.height = args[i + 1]
@@ -141,3 +141,13 @@ class Rectangle(Base):
                     self.x = v
                 elif k == "y":
                     self.y = v
+
+    def to_dictionary(self):
+        """Returns dictionary representation of Rectangle"""
+        return {
+                "id": self.id,
+                "width": self.id,
+                "height": self.id,
+                "x": self.x
+                "y": self.y
+        }
