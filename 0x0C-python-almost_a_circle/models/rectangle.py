@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Defines a class Rectangle"""
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -27,9 +28,9 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """Sets new value fo rectangle width
+        """Sets new value for rectangle width
         Args:
-            value (int): Newrectangle width
+            value (int): New rectangle width
         """
         if type(value) != int:
             raise TypeError("width must be an Integer")
