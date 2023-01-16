@@ -47,3 +47,27 @@ class Base:
             return ("[]")
         else:
             return (json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Function that return all attributes instance set"""
+        if cls.__name__ == "Square":
+            dummy = cls(1)
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        dummy.update(**dictionary)
+        return (dummy)
+
+    @classmethod
+    def load_from_file(cls):
+        """Function for returning list of instances"""
+        filename = cls.__name__ + ".json"
+        instance_list = []
+        try:
+            with open(filename, "r", encoding="utf-8") as fr:
+                instances = cls.from_json_string(fr.read())
+            for i, dct in enumerate(instances):
+                instance_list.append(cls.create(**instances[i]))
+        except:
+            pass
+        return instance_list
