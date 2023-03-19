@@ -12,7 +12,7 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name)
+    states = session.query(State)
     found = False
     for state in states:
         if state == sys.argv[4]:
