@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Scripts that print the state
-# which contains letter a
+"""Scripts that print the state which contains letter a"""
 
 
 import sys
