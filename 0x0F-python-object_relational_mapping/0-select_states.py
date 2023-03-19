@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# List all states fromhbtn_0e_0_usa database
 
 import sys
 import MySQLdb
