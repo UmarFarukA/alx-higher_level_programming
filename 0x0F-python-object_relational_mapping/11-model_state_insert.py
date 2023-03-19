@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Scripts that add new state
+"""Scripts that add new state"""
 
 
 import sys
