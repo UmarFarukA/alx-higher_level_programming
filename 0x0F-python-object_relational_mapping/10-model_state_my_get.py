@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Scripts that print the state
-# id base on what user entered
+"""Scripts that print the state id base on what user entered"""
 
 
 import sys
