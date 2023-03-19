@@ -13,6 +13,6 @@ if __name__ == "__main__":
              ON cities.state_id = states.id ORDER BY cities.id"
     cur.execute(query)
     print(", ".join([row[2] for row in cur.fetchall()
-               if row[4] == sys.argv[4]]))
+          if row[4] == sys.argv[4]]))
     cur.close()
     db.close()
