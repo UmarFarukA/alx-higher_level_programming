@@ -13,10 +13,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).filter(State.name)
-    
     found = False
     for state in states:
-        if statei == sys.argv[4]:
+        if state == sys.argv[4]:
             print("{}".format(state.id))
             found = True
             break
