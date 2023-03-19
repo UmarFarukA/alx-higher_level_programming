@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-# Scripts that print the first state object
+"""Scripts that print the first state object"""
 
 
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State
+from model_state import State
 
 if __name__ == "__main__":
     engine = create_engine("mysql+mysqldb://{}:{}@localhost:3306/{}"
@@ -17,4 +17,4 @@ if __name__ == "__main__":
     if state is None:
         print("Nothing")
     else:
-        print("{} {}".format(state.id, state.name))
+        print("{}: {}".format(state.id, state.name))
