@@ -12,6 +12,6 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter_by(State.id == 2)
+    state = session.query(State).filter(State.id == 2)
     state.name = "New Mexico"
     session.commit()
