@@ -12,7 +12,7 @@ if __name__ == "__main__":
     query = "SELECT * FROM cities INNER JOIN states\
              ON cities.state_id = states.id ORDER BY cities.id"
     cur.execute(query)
-    [", ".join(print(row[2]) for row in cur.fetchall()
-               if row[4] == sys.argv[4])]
+    print(", ".join([row[2] for row in cur.fetchall()
+               if row[4] == sys.argv[4]]))
     cur.close()
     db.close()
