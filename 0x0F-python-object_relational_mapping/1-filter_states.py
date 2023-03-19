@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# List all states from the hbtn_0e_0_usa database that
-# starts with letter N
-
+"""List of all states that start with letter N"""
 import sys
 import MySQLdb
 
