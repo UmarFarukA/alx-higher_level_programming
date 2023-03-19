@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Scripts that print the state
-# which contains letter a
+"""Scripts that print the state which contains letter a"""
 
 
 import sys
@@ -13,9 +12,7 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like('%a%')).\
-
-    order_by(State.id)
+    states = session.query(State).filter(State.name.like('%a%'))
 
     for state in states:
         session.delete(state)
