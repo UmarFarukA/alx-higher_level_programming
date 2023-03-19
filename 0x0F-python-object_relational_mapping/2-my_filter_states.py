@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""List all states from the hbtn_0e_0_usa database that
-search base on user input"""
+"""List all states from the hbtn_0e_0_usa database
+   search base on user input
+"""
 
 import sys
 import MySQLdb
