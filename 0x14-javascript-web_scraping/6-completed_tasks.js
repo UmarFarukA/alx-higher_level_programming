@@ -7,8 +7,8 @@ request.get(url, function (err, response, body) {
     let completedTasks = {};
     todos.forEach((todo) => {
       if (todo.completed && completedTasks[todo.userId] === undefined) {
-        completedTasks[userId] = 1;
-      } else {
+        completedTasks[todo.userId] = 1;
+      } else if (todo.completed) {
         completedTasks[todo.userId] += 1;
       }
     });
