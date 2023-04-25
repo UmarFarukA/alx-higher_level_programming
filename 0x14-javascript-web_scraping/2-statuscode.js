@@ -1,4 +1,5 @@
 #!/usr/bin/node
 const request = require('request');
-const response = await request.get(process.argv[2]);
-console.log(`code: ${response.statusCode}`);
+request.get(process.argv[2]).on('res', function (res) {
+  console.log(`code: ${res.statusCode}`);
+});
