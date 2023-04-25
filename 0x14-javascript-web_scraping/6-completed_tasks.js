@@ -4,7 +4,7 @@ const url = process.argv[2];
 request.get(url, function (err, response, body) {
   if (!err) {
     const todos = JSON.parse(body);
-    let completedTasks = {};
+    const completedTasks = {};
     todos.forEach((todo) => {
       if (todo.completed && completedTasks[todo.userId] === undefined) {
         completedTasks[todo.userId] = 1;
